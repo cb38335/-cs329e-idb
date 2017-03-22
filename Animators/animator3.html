@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Include this line for top navigator -->
+  <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
 <style>
 
 table {
@@ -16,9 +19,14 @@ td, th {
 </style>
 </head>
 
-<body>
+<body bgcolor="#F0B27A">
+<!-- Top Navigator -->
+  <div w3-include-html="http://cs329e-cartoons.me/splash/topNavigator.html"></div>
+  <script>
+    w3IncludeHTML();
+  </script>
 
-<table width=30% align="left" style="margin-top: 70px; margin-left: 20px;">
+<table bgcolor="#FDFEFE" width=30% align="left" style="margin-top: 70px; margin-left: 20px;">
   <tr align="center">
     <th>Hiromu Arakawa</th>
   </tr>
@@ -30,7 +38,7 @@ td, th {
   </tr>
 </table>
 
-<table align="right" width=65% style="margin-top: 70px; margin-right: 20px">
+<table bgcolor="#FDFEFE" align="right" width=65% style="margin-top: 70px; margin-right: 20px">
   <tr align="center">
     <th colspan="2">Series</th>
   </tr>
