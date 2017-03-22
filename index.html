@@ -3,8 +3,8 @@
 	<head>
 		<title>CS329E-Cartoons</title>
 		
-		<!-- Including stylesheets -->
-		<link rel="stylesheet" type="text/css" href="splash/topNavigator.css">
+		<!-- Include this line for top navigator -->
+		<script src="https://www.w3schools.com/lib/w3data.js"></script>
 		
 		<style>
 			img{
@@ -15,15 +15,13 @@
 			}
 		</style>
 	</head>
-
+	
 	<body>
 		<!-- Top Navigator -->
-		<div class="topNavigator" id="myTopNavigator">
-			<a href="dummy.html">Animator</a>
-			<a href="dummy.html">Genre</a>
-			<a href="dummy.html">Country of Origin</a>
-			<a href="dummy.html">About</a>
-		</div>
+		<div w3-include-html="splash/topNavigator.html"></div>
+		<script>
+			w3IncludeHTML();
+		</script>
 
 		<img src="splash/img/all-cartoon.JPG" />
 
