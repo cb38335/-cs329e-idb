@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>Fullmetal Alchemist</title>
+    <style type="text/css">
+    body {
+      background-color: #F0F3F4;
+    }
+    #title1 {background-color: #FF3333;
+              padding-top: 30px;
+              padding-bottom: 15px;}
+    table {background-color: #F2F2F2;
+    border-collapse: collapse;}
+    th {border: 1px solid black;}
+    </style>
+  </head>
+
+  <body>
+    <h1>Fullmetal Alchemist</h1>
+    <img class="mySlides" src="FullmetalAlchemist.jpg">
+  <img class="mySlides" src="FullmetalAlchemist2.jpg">
+  <img class="mySlides" src="FullmetalAlchemist3.jpg">
+  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+}
+</script>
+</br>
+<h3> Fullmetal Alchemist is an anime series that follows brother Edward and Alphonse Elric while they are in seach of the Philophers's Stone.</h>
+</br>
+</br>
+    <table>
+      <tr>
+        <th COLSPAN="2" id="title1">
+          <h2> Basic Facts </h2>
+        </th>
+      </tr>
+      <tr>
+        <th></br>Genre</th>
+        <th></br>Adventure, Science Fantasy</th>
+      </tr>
+      <tr>
+        <th></br>Country of Origin</th>
+        <th></br>Japan</th>
+      </tr>
+      <tr>
+        <th></br>Main Characters</th>
+        <th></br>Edward Elric
+        </br> Alphonse Elric
+      </br> Homunculi
+    </br> Scar
+  </br> Tim Marcoh
+</br> Yoki </th>
+      </tr>
+      <tr>
+        <th></br>Directed by</th>
+        <th></br>Seiji Mizushima</th>
+      </tr>
+      <tr>
+        <th></br>Written by</th>
+        <th></br>Shō Aikawa</th>
+      </tr>
+    </table>
+  </br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YTusWcm-3ag" frameborder="0" allowfullscreen></iframe>
+
+  </body>
+
+</html>
