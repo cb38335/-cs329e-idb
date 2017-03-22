@@ -4,6 +4,7 @@
 		<title>
 		Cartoons-Japan
 		</title>
+		<script src="https://www.w3schools.com/lib/w3data.js"></script>
 		<style type = "text/css">
 		h1 {text-decoration: underline; text-align: center}
 		img{display: block; margin: 0 auto}
@@ -11,6 +12,10 @@
 	</head>
 
 	<body>
+		<div w3-include-html="http://cs329e-cartoons.me/splash/topNavigator.html"></div>
+		<script>
+			w3IncludeHTML();
+		</script>
 	<h1><strong>United States of America</strong></h1>
 	<img src = "usa_map.jpg" alt = "USA Map">
 	<h3>Current Population: 324,705,000</h3>
