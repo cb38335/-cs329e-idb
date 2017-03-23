@@ -1,10 +1,10 @@
 body{
   background-color: #fffadb;
   margin: auto;
-  width: 90%;
   text-align: center;
+  color: black;
   font-family: arial, sans-serif;
-  padding: 50px
+  padding: 5px
 }
 
 #header{
@@ -19,4 +19,8 @@ table{
 table, td, th {
   border: 1px solid black;
   padding: 50px;
+}
+
+a{
+  color: black;
 }

@@ -1,6 +1,8 @@
 <html>
   <head>
     <title>Fullmetal Alchemist</title>
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
     <style type="text/css">
     body {
       background-color: #F0F3F4;
@@ -15,12 +17,18 @@
   </head>
 
   <body>
+    <!-- Top Navigator -->
+		<div w3-include-html="http://cs329e-cartoons.me/splash/topNavigator.html"></div>
+		<script>
+			w3IncludeHTML();
+		</script>
+
     <h1>Fullmetal Alchemist</h1>
-    <img class="mySlides" src="FullmetalAlchemist.jpg">
-  <img class="mySlides" src="FullmetalAlchemist2.jpg">
-  <img class="mySlides" src="FullmetalAlchemist3.jpg">
-  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    <img class="mySlides" src="FullmetalAlchemist.jpg" width= 650px height= 370px>
+  <img class="mySlides" src="FullmetalAlchemist2.jpg" width= 650px height= 370px>
+  <img class="mySlides" src="FullmetalAlchemist3.jpg" width= 650px height= 370px>
+  <button class="btn btn-primary btn-md" onclick="plusDivs(-1)">Previous</button>
+<button class="btn btn-primary btn-md" onclick="plusDivs(+1)">Next</button>
 
 <script>
 var slideIndex = 1;
