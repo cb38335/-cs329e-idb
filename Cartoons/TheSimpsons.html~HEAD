@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>The Simpsons</title>
+    <style type="text/css">
+    body {
+      background-color: #F0F3F4;
+    }
+    #title1 {background-color: #3498db;
+              padding-top: 30px;
+              padding-bottom: 15px;}
+    table {background-color: #F2F2F2;
+    border-collapse: collapse;}
+    th {border: 1px solid black;}
+    </style>
+  </head>
+
+  <body>
+    <h1>The Simpsons</h1>
+    <img src="TheSimpsons.png" alt="The Simpsons Picture" width="50%">
+  </br>
+</br>
+    <table>
+      <tr>
+        <th COLSPAN="2" id="title1">
+          <h2> Basic Facts </h2>
+        </th>
+      </tr>
+      <tr>
+        <th></br>Genre</th>
+        <th></br>Animated Sitcom</th>
+      </tr>
+      <tr>
+        <th></br>Country of Origin</th>
+        <th></br>United States</th>
+      </tr>
+      <tr>
+        <th></br>Main Characters and Voice Actor</th>
+        <th></br>Dan Castellaneta as Homer Simpson
+        </br> Julie Kavner as Marge Simpson
+      </br> Nancy Cartwright as Bart Simpson
+    </br> Yeardley Smith as Lisa Simpson
+  </br> Various voices as Maggie Simpson </th>
+      </tr>
+      <tr>
+        <th></br>Creator</th>
+        <th></br>Matt Groening</th>
+      </tr>
+      <tr>
+        <th></br>Production Company</th>
+        <th></br>Fox Television Animation
+        </br> Gracie Films</th>
+      </tr>
+    </table>
+  </body>
+
+</html>

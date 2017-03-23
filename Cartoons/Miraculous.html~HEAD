@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Miraculous: Tales of Ladybug & Cat Noir</title>
+    <style type="text/css">
+    body {
+      background-color: #F0F3F4;
+    }
+    #title1 {background-color: #17202A;
+              padding-top: 30px;
+              padding-bottom: 15px;}
+    table {background-color: #F2F2F2;
+    border-collapse: collapse;}
+    th {border: 1px solid black;}
+    </style>
+  </head>
+
+  <body>
+    <h1>Miraculous: Tales of Ladybug & Cat Noir</h1>
+    <img src="miraculous.jpg" alt="Miraculous Picture" width="50%">
+  </br>
+</br>
+    <table>
+      <tr>
+        <th COLSPAN="2" id="title1">
+          <h2> Basic Facts </h2>
+        </th>
+      </tr>
+      <tr>
+        <th></br>Genre</th>
+        <th></br>Action, Magical girl</th>
+      </tr>
+      <tr>
+        <th></br>Country of Origin</th>
+        <th></br>France</th>
+      </tr>
+      <tr>
+        <th></br>Main Characters</th>
+        <th></br>Marinette Dupain-Cheng aka Ladybug
+        </br> Adrien Agreste aka Cat Noir
+      </tr>
+      <tr>
+        <th></br>Created by</th>
+        <th></br>Thomas Astruc</th>
+      </tr>
+      <tr>
+        <th></br>Directed by</th>
+        <th></br>Thomas Astruc
+        </br>Christelle Abgrall
+      </br>Wilifried Pain
+    </br>Jun Violet</th>
+      </tr>
+    </table>
+  </body>
+
+</html>
