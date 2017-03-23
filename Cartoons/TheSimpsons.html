@@ -4,14 +4,17 @@
       <script src="https://www.w3schools.com/lib/w3data.js"></script>
     <style type="text/css">
     body {
-      background-color: #F0F3F4;
+      background-color: #EAF2F8;
     }
-    #title1 {background-color: #3498db;
-              padding-top: 30px;
-              padding-bottom: 15px;}
+    #title1 {background-color: #8E94D6;}
+    img {width: 650px; height: 370px;
+          border-radius: 10px;
+          margin: auto;
+          border: 5px solid #8E94D6;}
     table {background-color: #F2F2F2;
     border-collapse: collapse;}
     th {border: 1px solid black;}
+    th, td{padding: 15px;}
     </style>
   </head>
 
@@ -22,41 +25,88 @@
 			w3IncludeHTML();
 		</script>
     <h1>The Simpsons</h1>
-    <img src="TheSimpsons.png" alt="The Simpsons Picture" width="50%">
+    <center>
+      <font size="5">Slideshow:</font>
+    <img class="mySlides" src="TheSimpsons.png">
+    <img class="mySlides" src="thesimpsons2.jpeg">
+    <img class="mySlides" src="thesimpsons3.jpg">
+    <img class="mySlides" src="TheSimpsonsLogo.png">
   </br>
+  <center>
+  <button class="btn" onclick="plusDivs(-1)">Previous Image</button>
+<button class="btn" onclick="plusDivs(+1)">Next Image</button></center>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+}
+</script>
 </br>
-    <table>
+<h3> The longtime series focuses on the dysfunctional Simpsons family living in the fictional town of Springfield. </h3>
+</br>
+
+    <table width="600px">
       <tr>
         <th COLSPAN="2" id="title1">
           <h2> Basic Facts </h2>
         </th>
       </tr>
       <tr>
-        <th></br>Genre</th>
-        <th></br>Animated Sitcom</th>
+        <th>Genre</th>
+        <th>Animated Sitcom</th>
       </tr>
       <tr>
-        <th></br>Country of Origin</th>
-        <th></br>United States</th>
+        <th>Country of Origin</th>
+        <th><a href="http://cs329e-cartoons.me/CountryOfOrigin/usa.html">United States</a></th>
       </tr>
       <tr>
-        <th></br>Main Characters and Voice Actor</th>
-        <th></br>Dan Castellaneta as Homer Simpson
+        <th>Main Characters and Voice Actor</th>
+        <th>Dan Castellaneta as Homer Simpson
         </br> Julie Kavner as Marge Simpson
       </br> Nancy Cartwright as Bart Simpson
     </br> Yeardley Smith as Lisa Simpson
   </br> Various voices as Maggie Simpson </th>
       </tr>
       <tr>
-        <th></br>Creator</th>
-        <th></br>Matt Groening</th>
+        <th>Creator</th>
+        <th><a href="http://cs329e-cartoons.me/Animators/animator1.html">Matt Groening</a></th>
       </tr>
+      <tr><th>Developed by</th>
+        <th>James L. Brooks
+        </br>Matt Groening
+      </br> Sam Simon</th></tr>
       <tr>
-        <th></br>Production Company</th>
-        <th></br>Fox Television Animation
-        </br> Gracie Films</th>
+        <th>Production Company</th>
+        <th>Fox Television Animation
+        </br>Gracie Films</th>
       </tr>
+      <tr><th>Number of Seasons</th>
+        <th>28</th></tr>
+        <tr><th>Number of Episodes</th>
+          <th>614</th></tr>
+          <tr><th COLSPAN = "2"><a href="http://www.simpsonsworld.com/">The Simpsons Official website</a>
     </table>
+  </br>
+  <p>The following is a Youtube clip of The Simpsons Funny moments:</p>
+    <<iframe width="560" height="315" src="https://www.youtube.com/embed/1q6Gj9Cft6k" frameborder="0" allowfullscreen></iframe>>
+  </center>
+</br>
+<a href="http://cs329e-cartoons.me/Mains/cname-main.html">Return to main cartoon page</a>
+</br>
   </body>
 
 </html>

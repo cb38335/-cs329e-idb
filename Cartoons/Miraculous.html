@@ -2,16 +2,21 @@
   <head>
     <title>Miraculous: Tales of Ladybug & Cat Noir</title>
       <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
     <style type="text/css">
     body {
-      background-color: #F0F3F4;
+      background-color: #EAF2F8;
     }
-    #title1 {background-color: #17202A;
-              padding-top: 30px;
-              padding-bottom: 15px;}
+    #title1 {background-color: #8E94D6;}
+    img {width: 650px; height: 370px;
+          border-radius: 10px;
+          margin: auto;
+          border: 5px solid #8E94D6;}
     table {background-color: #F2F2F2;
     border-collapse: collapse;}
     th {border: 1px solid black;}
+    th {border: 1px solid black;}
+    th, td{padding: 15px;}
     </style>
   </head>
 
@@ -22,40 +27,93 @@
 			w3IncludeHTML();
 		</script>
     <h1>Miraculous: Tales of Ladybug & Cat Noir</h1>
-    <img src="miraculous.jpg" alt="Miraculous Picture" width="50%">
+    <center>
+      <font size="5">Slideshow:</font>
+      <img class="mySlides" src="miraculous.jpg">
+    <img class="mySlides" src="miraculous2.jpg">
+    <img class="mySlides" src="miraculous3.jpg">
+    <img class="mySlides" src="miraculouslogo.png">
   </br>
+
+    <button class="btn" onclick="plusDivs(-1)">Previous Image</button>
+  <button class="btn" onclick="plusDivs(+1)">Next Image</button>
+
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+      showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length} ;
+      for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+  }
+  </script>
+  </br>
+  <h3> This series focuses on teenagers Marinette Dupain-Cheng and Adrien Agrests who are the superheros Ladybug and Cat Noir but both are unaware of each other's identity. </h3>
 </br>
-    <table>
+</br>
+    <table width="600px">
       <tr>
         <th COLSPAN="2" id="title1">
           <h2> Basic Facts </h2>
         </th>
       </tr>
       <tr>
-        <th></br>Genre</th>
-        <th></br>Action, Magical girl</th>
+        <th>Genre</th>
+        <th>Action, Magical girl</th>
       </tr>
       <tr>
-        <th></br>Country of Origin</th>
-        <th></br>France</th>
+        <th>Country of Origin</th>
+        <th><a href="http://cs329e-cartoons.me/CountryOfOrigin/france.html">France</a></th>
       </tr>
       <tr>
-        <th></br>Main Characters</th>
-        <th></br>Marinette Dupain-Cheng aka Ladybug
+        <th>Main Characters</th>
+        <th>Marinette Dupain-Cheng aka Ladybug
         </br> Adrien Agreste aka Cat Noir
       </tr>
       <tr>
-        <th></br>Created by</th>
-        <th></br>Thomas Astruc</th>
+        <th>Created by</th>
+        <th><a href="http://cs329e-cartoons.me/Animators/animator2.html">Thomas Astruc</a></th>
       </tr>
       <tr>
-        <th></br>Directed by</th>
-        <th></br>Thomas Astruc
+        <th>Directed by</th>
+        <th>Thomas Astruc
         </br>Christelle Abgrall
       </br>Wilifried Pain
     </br>Jun Violet</th>
       </tr>
+      <tr>
+      <th>Written by </th>
+      <th>Thomas Astruc
+      </br>Sébastien Thibaudeau</th></tr>
+    </tr>
+    <tr><th>Producers</th>
+      <th>Jeremy Zap
+      </br>Aton Soumache
+    </br> Jacqueline Tordjman
+  </br> Maurice Marciano</th></tr>
+  <tr><th>Number of episodes</th>
+    <th>26 + special episode</th></tr>
+  <tr><th COLSPAN="2"> <a href="http://www.miraculousladybug.com/">Miraculous Ladybug Website</a></th></tr>
+
+
     </table>
+
+  </br>
+  <p>The following is a Youtube clip of a Miraculous Ladybug episode:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fWir3w0K3eE" frameborder="0" allowfullscreen></iframe></center>
+  </br>
+  <a href="http://cs329e-cartoons.me/Mains/cname-main.html">Return to main cartoon page</a>
+</br>
   </body>
 
 </html>
