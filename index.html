@@ -2,10 +2,28 @@
 <html>
 	<head>
 		<title>CS329E-Cartoons</title>
+		
+		<!-- Include this line for top navigator -->
+		<script src="https://www.w3schools.com/lib/w3data.js"></script>
+		
+		<style>
+			img{
+				
+				width: 100%;
+				height: auto;
+				opacity: 0.9;
+			}
+		</style>
 	</head>
-
+	
 	<body>
-		<h1>All about the cartoons</h1>
-		<p>Test</p>
+		<!-- Top Navigator -->
+		<div w3-include-html="http://cs329e-cartoons.me/splash/topNavigator.html"></div>
+		<script>
+			w3IncludeHTML();
+		</script>
+
+		<img src="splash/img/all-cartoon.JPG" />
+
 	</body>
 </html>
