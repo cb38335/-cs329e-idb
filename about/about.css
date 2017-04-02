@@ -1,0 +1,52 @@
+body {
+	background-color: #EAF2F8;
+}
+
+img {
+	width: 300px;
+	height: auto;
+}
+
+td {
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+.memberT {
+	width: 300px;
+	margin: 75px;
+	display: inline-block;
+}
+
+.name {
+	color: black;
+}
+
+.bio {
+	color: green;
+}
+
+.responsibility {
+	color: red;
+}
+
+.statData {
+	border: 1px solid black;
+	padding: 10px;
+	background-color: white;
+}
+
+#memberH2 {
+	text-align: center;
+}
+
+#members {
+	text-align: center;
+}
+
+#stat {
+	border-collapse: collapse;
+}
