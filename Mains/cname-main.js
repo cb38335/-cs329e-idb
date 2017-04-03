@@ -44,4 +44,4 @@ function sortByName()
 	}
 }
 
-document.getElementById("name").addEventListener("click", sortByName());
+document.getElementById("name").addEventListener("click", sortByName);
