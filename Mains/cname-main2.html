@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<!-- Bootstrap -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="https://www.w3schools.com/lib/w3data.js"></script>
+<title> Cartoon Name </title>
+
+<!-- Pagination Start -->
+<style>
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: white;
+    color: black;
+}
+
+.pagination a:hover:not(.active) {background-color: white;}
+</style>
+<!-- Pagination End -->
+
+  <script src="./cname-main.js" type="text/javascript"> </script>
+
+  <!-- Include this line for top navigator -->
+  <script src="https://www.w3schools.com/lib/w3data.js"></script> 
+  
+<title> Cartoon Name </title>
+</head>
+
+<body>
+
+  <div w3-include-html="http://cs329e-cartoons.me/splash/topNavigator.html"></div>
+    <script>
+      w3IncludeHTML();
+    </script>
+  
+  <h2 id = "header"> Cartoon Name </h2>
+
+  <table id = "T1" width = "90%">
+    <tr>
+      <th> Photo </th>
+	  	<th id = "name"> Series Name </th>
+	  	<th id = "creator"> Creator </th>
+	  	<th id = "country"> Country of Origin </th>
+	  	<th id = "genre"> Genres </th>
+	  	<th id = "VA"> Main Character and Voice Actor </th>
+    </tr>
+    <tr id = "row1">
+      <td> <img src = "/Cartoons/Arthur.png" width = "200" height = "200" /> </td>
+      <td> <a href = "/Cartoons/Arthur.html"> Arthur </a></td>
+      <td>  <a href = "/Creators/creator6.html"> Marc Brown </a> </td>
+      <td> United States of America, Canada </td>
+      <td> Educational Comedy </td>
+      <td> Jacob Ursomarzo as Arthur Read </td>
+    </tr>
+    <tr id = "row2">
+      <td> <img src = "/Cartoons/Masha.png" width = "200" height = "200" /> </td>
+      <td> <a href = "/Cartoons/Masha.html"> Masha and the Bear </a></td>
+      <td>  <a href = "/Creators/creator4.html"> Oleg Kuzovkov </a> </td>
+      <td> Russia </td>
+      <td> Adventure, Comedy </td>
+      <td> Varvara Sarantseva as Masha </td>
+    </tr>
+    <tr id = "row3">
+      <td> <img src = "/Cartoons/Gumball.png" width = "200" height = "200" /> </td>
+      <td> <a href = "/Cartoons/Gumball.html"> The Amazing World of Gumball </a></td>
+      <td>  <a href = "/Creators/creator5.html"> Ben Bocquelet </a> </td>
+      <td> England, United States of America </td>
+      <td> Adventure, Comedy, Fantasy </td>
+      <td> Logan Grove as Gumball Watterson </td>
+    </tr>
+  </table>
+
+<div class="pagination">
+  <a href="cname-main.html">&laquo;</a>
+
+  <a href="cname-main.html">1</a>
+  <a class="active" href="cname-main2.html">2</a>
+
+  <a href="#">&raquo;</a>
+</div>
+
+</body>

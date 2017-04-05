@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<!-- Bootstrap -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="https://www.w3schools.com/lib/w3data.js"></script>
+<title> Creators </title>
+
+<!-- Pagination Start -->
+<style>
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: white;
+    color: black;
+}
+
+.pagination a:hover:not(.active) {background-color: white;}
+</style>
+<!-- Pagination End -->
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="https://www.w3schools.com/lib/w3data.js"></script>
+<title> Animator </title>
+</head>
+
+<body>
+
+  <div w3-include-html="http://cs329e-cartoons.me/splash/topNavigator.html"></div>
+    <script>
+      w3IncludeHTML();
+    </script>
+
+  <h2 id = "header"> Creators </h2>
+
+  <table id = "T1" width = "90%">
+    <tr>
+      <th> Photo </th>
+	  	<th> Name </th>
+	  	<th> Date of Birth </th>
+      <th> Country of Origin </th>
+	  	<th> Notable work </th>
+    </tr>
+    <tr>
+      <td> <img src = "/Creators/images/mattgroening.jpg" width = "200" height = "200"/> </td>
+      <td> <a href = "/Creators/creator1.html"> Matt Groening </a></td>
+      <td> February 15, 1954 </td>
+      <td> <a href="http://cs329e-cartoons.me/CountryOfOrigin/usa.html">United States of America</a> </td>
+      <td> <a href="http://cs329e-cartoons.me/Cartoons/TheSimpsons.html">The Simpsons</a> </td>
+    </tr>
+    <tr>
+      <td> <img src = "/Creators/images/thomasastruc.png" width = "200" height = "200" /> </td>
+      <td> <a href = "/Creators/creator2.html"> Thomas Astruc </a></td>
+      <td> January 18, 1975 </td>
+      <td> <a href="http://cs329e-cartoons.me/CountryOfOrigin/france.html">France</a> </td>
+      <td> <a href="http://cs329e-cartoons.me/Cartoons/Miraculous.html">Miraculous: Tales of Ladybug & Cat Noir</a> </td>
+    </tr>
+    <tr>
+      <td> <img src = "/Creators/images/hiromuarakawa.jpg" width = "200" height = "200" /> </td>
+      <td> <a href = "/Creators/creator3.html"> Hiromu Arakawa </a></td>
+      <td> May 8, 1973 </td>
+      <td> <a href="http://cs329e-cartoons.me/CountryOfOrigin/japan.html">Japan</a> </td>
+      <td> <a href="http://cs329e-cartoons.me/Cartoons/FullMetalAlchemist.html">Fullmetal Alchemist</a> </td>
+    </tr>
+  </table>
+
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a class="active" href="creator-main.html">1</a>
+  <a href="creator-main2.html">2</a>
+
+  <a href="creator-main2.html">&raquo;</a>
+</div>
+
+</body>

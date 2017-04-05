@@ -18,6 +18,7 @@ table{
 }
 
 table, td, th {
+  text-align: center;
   border: 1px solid black;
   padding: 50px;
 }
