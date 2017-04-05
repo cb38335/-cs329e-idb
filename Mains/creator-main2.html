@@ -4,6 +4,8 @@
 
 <head>
 
+<script src="../util/sortableTable.js"></script>
+
 <!-- Bootstrap -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Latest compiled and minified CSS -->
@@ -53,34 +55,37 @@
 
   <table id = "T1" width = "90%">
     <tr>
-      <th> Photo </th>
-	  	<th> Name </th>
-	  	<th> Date of Birth </th>
-      <th> Country of Origin </th>
-	  	<th> Notable work </th>
+      <th>Photo</th>
+	  	<th>Name </th>
+	  	<th>Date of Birth </th>
+      <th>Country of Origin </th>
+	  	<th>Notable Work </th>
     </tr>
     <tr>
       <td> <img src = "/Creators/images/marcbrown.jpg" width = "200" height = "200" /> </td>
       <td> <a href = "/Creators/creator6.html">Marc Brown</a></td>
-      <td> November 25, 1946 </td>
+      <td>1946/11/25</td>
       <td> <a href="http://cs329e-cartoons.me/CountryOfOrigin/usa.html">United States of America</a> </td>
       <td> <a href="http://cs329e-cartoons.me/Cartoons/Arthur.html">Arthur</a> </td>
     </tr>
     <tr>
       <td> <img src = "/Creators/images/olegkuzovkov.jpg" width = "200" height = "200" /> </td>
       <td> <a href = "/Creators/creator4.html">Oleg Kuzovkov</a></td>
-      <td> October 22, 1960 </td>
+      <td>1960/10/22</td>
       <td> <a href="http://cs329e-cartoons.me/CountryOfOrigin/russia.html">Russia</a> </td>
       <td> <a href="http://cs329e-cartoons.me/Cartoons/Masha.html">Masha and the Bear</a> </td>
     </tr>
     <tr>
       <td> <img src = "/Creators/images/benbocquelet.jpg" width = "200" height = "200" /> </td>
       <td> <a href = "/Creators/creator5.html"> Ben Bocquelet </a></td>
-      <td> June 27, 1983 </td>
-      <td> <a href="http://cs329e-cartoons.me/CountryOfOrigin/england.html">England</a> </td>
+      <td>1983/06/27</td>
+      <td> <a href="http://cs329e-cartoons.me/CountryOfOrigin/uk.html">United Kingdom</a> </td>
       <td> <a href="http://cs329e-cartoons.me/Cartoons/Gumball.html">The Amazing World of Gumball</a> </td>
     </tr>
   </table>
+
+<script type="text/javascript">sortableTable("T1", 1, 2, 3, 4);</script>
+
 
 <div class="pagination">
   <a href="creator-main.html">&laquo;</a>
