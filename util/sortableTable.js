@@ -24,15 +24,22 @@ function sortableTable(){
 					var previousText = "";
 					for (var i = 1; i < rowLength-d; i++){
 						var currentText = table.rows[i].cells[col].innerText;
+						var wasSwitched = false;
 						if (previousText != ""){
 							if (currentText.toLowerCase() < previousText.toLowerCase()){
+								//alert("Move "+currentText.toLowerCase()+" before "+previousText.toLowerCase());
 								var currentRowItem = table.rows[i];
 								var previousRowItem = table.rows[i-1];
 								var parentNode = table.rows[i].parentNode;
 								parentNode.insertBefore(currentRowItem, previousRowItem);
+								wasSwitched = true;
 							}
 						}
-						previousText = currentText;
+						//alert("previousText before update: "+previousText);
+						if (wasSwitched == false){
+							previousText = currentText;
+						}
+						//alert("previousText after update: "+previousText);
 					}
 					d++;
 				}
@@ -45,15 +52,21 @@ function sortableTable(){
 					var previousText = "";
 					for (var i = 1; i < rowLength-d; i++){
 						var currentText = table.rows[i].cells[col].innerText;
+						var wasSwitched = false;
 						if (previousText != ""){
 							if (currentText.toLowerCase() > previousText.toLowerCase()){
+								//alert("Move "+currentText.toLowerCase()+" before "+previousText.toLowerCase());
 								var currentRowItem = table.rows[i];
 								var previousRowItem = table.rows[i-1];
 								var parentNode = table.rows[i].parentNode;
 								parentNode.insertBefore(currentRowItem, previousRowItem);
 							}
 						}
-						previousText = currentText;
+						//alert("previousText before update: "+previousText);
+						if (wasSwitched == false){
+							previousText = currentText;
+						}
+						//alert("previousText after update: "+previousText);
 					}
 					d++;
 				}
