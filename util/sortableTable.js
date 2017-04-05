@@ -23,7 +23,7 @@ function sortableTable(){
 				while (rowLength-d != 1){
 					var previousText = "";
 					for (var i = 1; i < rowLength-d; i++){
-						var currentText = table.rows[i].cells[col].innerHTML;
+						var currentText = table.rows[i].cells[col].innerText;
 						if (previousText != ""){
 							if (currentText.toLowerCase() < previousText.toLowerCase()){
 								var currentRowItem = table.rows[i];
@@ -44,7 +44,7 @@ function sortableTable(){
 				while (rowLength-d != 1){
 					var previousText = "";
 					for (var i = 1; i < rowLength-d; i++){
-						var currentText = table.rows[i].cells[col].innerHTML;
+						var currentText = table.rows[i].cells[col].innerText;
 						if (previousText != ""){
 							if (currentText.toLowerCase() > previousText.toLowerCase()){
 								var currentRowItem = table.rows[i];
