@@ -21,22 +21,45 @@ function sortableTable(){
 				var rowLength = table.rows.length;
 				var d = 0;
 				while (rowLength-d != 1){
-					var previousText = "";
+					var previousIndex = null;
 					for (var i = 1; i < rowLength-d; i++){
-						var currentText = table.rows[i].cells[col].innerText;
-						var wasSwitched = false;
-						if (previousText != ""){
-							if (currentText.toLowerCase() < previousText.toLowerCase()){
+						var currentIndex = i;
+						
+						if (previousIndex != null){
+							var shouldSwitch = false;
+							
+							var previousText = table.rows[previousIndex].cells[col].innerText;
+							var currentText = table.rows[currentIndex].cells[col].innerText;
+							// Get rid of commas
+							var previousTextWithoutComma = previousText.replace(/,/g, "");
+							var currentTextWithoutComma = currentText.replace(/,/g, "");
+							
+							// Special case: texts are convertible to integers
+							if (/^\d+$/.test(previousTextWithoutComma) && /^\d+$/.test(currentTextWithoutComma)){
+								
+								// Convert string into integer
+								var previousNum = parseInt(previousTextWithoutComma);
+								var currentNum = parseInt(currentTextWithoutComma);
+								// compare integers
+								if (previousNum > currentNum){
+									shouldSwitch = true;
+								}
+							} else {
+								// Normal case: texts are not convertible to integers
+								if (previousText.toLowerCase() > currentText.toLowerCase()){
+									shouldSwitch = true;
+								}
+							}
+							
+							// Switching
+							if (shouldSwitch){
 								var currentRowItem = table.rows[i];
 								var previousRowItem = table.rows[i-1];
 								var parentNode = table.rows[i].parentNode;
 								parentNode.insertBefore(currentRowItem, previousRowItem);
-								wasSwitched = true;
 							}
 						}
-						if (wasSwitched == false){
-							previousText = currentText;
-						}
+						previousIndex = currentIndex;
 					}
 					d++;
 				}
@@ -46,22 +69,45 @@ function sortableTable(){
 				var rowLength = table.rows.length;
 				var d = 0;
 				while (rowLength-d != 1){
-					var previousText = "";
+					var previousIndex = null;
 					for (var i = 1; i < rowLength-d; i++){
-						var currentText = table.rows[i].cells[col].innerText;
-						var wasSwitched = false;
-						if (previousText != ""){
-							if (currentText.toLowerCase() > previousText.toLowerCase()){
+						var currentIndex = i;
+						
+						if (previousIndex != null){
+							var shouldSwitch = false;
+							
+							var previousText = table.rows[previousIndex].cells[col].innerText;
+							var currentText = table.rows[currentIndex].cells[col].innerText;
+							// Get rid of commas
+							var previousTextWithoutComma = previousText.replace(/,/g, "");
+							var currentTextWithoutComma = currentText.replace(/,/g, "");
+							
+							// Special case: texts are convertible to integers
+							if (/^\d+$/.test(previousTextWithoutComma) && /^\d+$/.test(currentTextWithoutComma)){
+								
+								// Convert string into integer
+								var previousNum = parseInt(previousTextWithoutComma);
+								var currentNum = parseInt(currentTextWithoutComma);
+								// compare integers
+								if (previousNum < currentNum){
+									shouldSwitch = true;
+								}
+							} else {
+								// Normal case: texts are not convertible to integers
+								if (previousText.toLowerCase() < currentText.toLowerCase()){
+									shouldSwitch = true;
+								}
+							}
+							
+							// Switching
+							if (shouldSwitch){
 								var currentRowItem = table.rows[i];
 								var previousRowItem = table.rows[i-1];
 								var parentNode = table.rows[i].parentNode;
 								parentNode.insertBefore(currentRowItem, previousRowItem);
-								wasSwitched = true;
 							}
 						}
-						if (wasSwitched == false){
-							previousText = currentText;
-						}
+						previousIndex = currentIndex;
 					}
 					d++;
 				}
