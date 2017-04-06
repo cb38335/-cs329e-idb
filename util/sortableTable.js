@@ -27,7 +27,6 @@ function sortableTable(){
 						var wasSwitched = false;
 						if (previousText != ""){
 							if (currentText.toLowerCase() < previousText.toLowerCase()){
-								//alert("Move "+currentText.toLowerCase()+" before "+previousText.toLowerCase());
 								var currentRowItem = table.rows[i];
 								var previousRowItem = table.rows[i-1];
 								var parentNode = table.rows[i].parentNode;
@@ -35,11 +34,9 @@ function sortableTable(){
 								wasSwitched = true;
 							}
 						}
-						//alert("previousText before update: "+previousText);
 						if (wasSwitched == false){
 							previousText = currentText;
 						}
-						//alert("previousText after update: "+previousText);
 					}
 					d++;
 				}
@@ -55,18 +52,16 @@ function sortableTable(){
 						var wasSwitched = false;
 						if (previousText != ""){
 							if (currentText.toLowerCase() > previousText.toLowerCase()){
-								//alert("Move "+currentText.toLowerCase()+" before "+previousText.toLowerCase());
 								var currentRowItem = table.rows[i];
 								var previousRowItem = table.rows[i-1];
 								var parentNode = table.rows[i].parentNode;
 								parentNode.insertBefore(currentRowItem, previousRowItem);
+								wasSwitched = true;
 							}
 						}
-						//alert("previousText before update: "+previousText);
 						if (wasSwitched == false){
 							previousText = currentText;
 						}
-						//alert("previousText after update: "+previousText);
 					}
 					d++;
 				}
