@@ -8,5 +8,5 @@ def index():
     return "Text"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(‘138.197.24.180’, ‘80’)
     
