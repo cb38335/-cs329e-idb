@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>About</title>
+
+		<!-- Bootstrap -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<!-- Top Navigator -->
+		<script src="https://www.w3schools.com/lib/w3data.js"></script>
+		
+		<!-- My CSS -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about/css/about.css') }}">
+	</head>
+	
+	<body>
+		
+		<!-- Top Navigator -->
+		<div w3-include-html="{{ url_for('static', filename='../globalComponent/topNavigator.html') }}"></div>
+		<script>
+			w3IncludeHTML();
+		</script>
+		
+		<h1>Loopy Toons</h1>
+		
+		<h2 id="memberH2">Members</h2>
+		
+		
+		<!-- Member Info -->
+		<div id="members">
+			<table class="memberT">
+				<!-- Picture -->
+				<tr>
+					<td><img src="{{ url_for('static', filename='about/image/ChristianSquare.jpg') }}" class="img-circle" /></td>
+				</tr>
+				
+				<!-- Name -->
+				<tr>
+					<td class="name">Name: Christian Atayde</td>
+				</tr>
+				
+				<!-- Bio -->
+				<tr>
+					<td class="bio">Bio: I am a Senior mechanical engineering from El Paso, Texas getting a bachelor's and a Computer Elements Certificate. My hobbies are playing guitar, reading books, cooking, running, rock climbing and designing both computer science programs and models.</td>
+				</tr>
+				
+				<!--Major Responsibilities -->
+				<tr>
+					<td class="responsibility">Major Responsibilites: For this project, I will be taking care of anything dealing with the Country of origin of the cartoons and technical report.</td>
+				</tr>
+			</table>
+			
+			<table class="memberT">
+				<!-- Picture -->
+				<tr>
+					<td><img src="{{ url_for('static', filename='about/image/grecia.jpg') }}" class="img-circle" /></td>
+				</tr>
+				
+				<!-- Name -->
+				<tr>
+					<td class="name">Name: Grecia Reyna</td>
+				</tr>
+				
+				<!-- Bio -->
+				<tr>
+					<td class="bio">Bio: Philosophy major at the University of Texas at Austin.</td>
+				</tr>
+				
+				<!--Major Responsibilities -->
+				<tr>
+					<td class="responsibility">Responsibilities: Animator pages, Technical report</td>
+				</tr>
+			</table>
+			
+			<table class="memberT">
+				<!-- Picture -->
+				<tr>
+					<td><img src="{{ url_for('static', filename='about/image/chaquetteSquare.jpg') }}" class="img-circle" /></td>
+				</tr>
+				
+				<!-- Name -->
+				<tr>
+					<td class="name">Name: Chaquette Blanks</td>
+				</tr>
+				
+				<!-- Bio -->
+				<tr>
+					<td class="bio">
+						Bio: 22<br />
+						Senior<br />
+						Math major<br />
+						From Houston, TX<br />
+						1 older brother and 1 young sister<br />
+						Favorite Movie: Lilo & Stitch<br />
+						Favorite Food: Anything with shrimp<br />
+					</td>
+				</tr>
+				
+				<!--Major Responsibilities -->
+				<tr>
+					<td class="responsibility">Responsibilities: 3 pages for the cartoon pillar, Technical report</td>
+				</tr>
+			</table>
+			
+			<table class="memberT">
+				<!-- Picture -->
+				<tr>
+					<td><img src="{{ url_for('static', filename='about/image/daniel.jpg') }}" class="img-circle" /></td>
+				</tr>
+				
+				<!-- Name -->
+				<tr>
+					<td class="name">Name: Daniel Vuong</td>
+				</tr>
+				
+				<!-- Bio -->
+				<tr>
+					<td class="bio">Bio: Economics major at the University of Texas at Austin.</td>
+				</tr>
+				
+				<!--Major Responsibilities -->
+				<tr>
+					<td class="responsibility">Responsibilities: Main pages of all models, Technical report</td>
+				</tr>
+			</table>
+			
+			<table class="memberT">
+				<!-- Picture -->
+				<tr>
+					<td><img src="{{ url_for('static', filename='about/image/rin-airchairSquare.jpg') }}" class="img-circle" /></td>
+				</tr>
+				
+				<!-- Name -->
+				<tr>
+					<td class="name">Name: Beom Kim</td>
+				</tr>
+				
+				<!-- Bio -->
+				<tr>
+					<td class="bio">Bio: Economics major at the University of Texas at Austin.</td>
+				</tr>
+				
+				<!--Major Responsibilities -->
+				<tr>
+					<td class="responsibility">Responsibilities: Splash, About, Technical report</td>
+				</tr>
+			</table>
+		</div>
+		
+		<h2>Statistics</h2>
+		<table id="stat">
+			<tr>
+				<td class="statData">Total Commits</td>
+				<td class="statData">Total Issues</td>
+			</tr>
+			<tr>
+				<!--github stat-->
+				<td class="statData">221</td>
+				<td class="statData">33</td>
+			</tr>
+		</table>
+		
+		<ul>
+			<li><a href="https://github.com/cb38335/cb38335.github.io/issues" target="_blank">GitHub Issue Tracker</a></li>
+			<li><a href="https://github.com/cb38335/cb38335.github.io" target="_blank">GitHub Repo</a></li>
+			<li><a href="https://github.com/cb38335/cb38335.github.io/wiki" target="_blank">GitHub Wiki</a></li>
+		</ul>
+		
+		<h2>Tools</h2>
+		<ul>
+			<li><a href="https://github.com/" target="_blank">GitHub</a></li>
+			<li><a href="https://slack.com/" target="_blank">Slack</a></li>
+		</ul>
+		
+	</body>
+</html>

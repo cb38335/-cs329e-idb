@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title> Creators </title>
+	
+		<!-- Sortable Table -->
+		<script src="{{ url_for('static', filename='utility/sortableTable/sortableTable.js') }}"></script>
+		
+		<!-- Bootstrap -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<!-- Top Navigator -->
+		<script src="https://www.w3schools.com/lib/w3data.js"></script>
+		
+		<!-- Pagination -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='utility/pagination/pagination.css') }}">
+		
+		<!-- My CSS -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mainPage/css/main.css') }}">
+		
+	</head>
+
+	<body>
+
+		<!-- Top Navigator -->
+		<div w3-include-html="{{ url_for('static', filename='../globalComponent/topNavigator.html') }}"></div>
+		<script>
+			w3IncludeHTML();
+		</script>
+		
+		<!-- Header2 -->
+		<h2 id = "header"> Creators </h2>
+		
+		<!-- Table -->
+		<table id = "T1" width = "90%">
+			<tr>
+				<th>Photo</th>
+				<th>Name </th>
+				<th>Date of Birth </th>
+				<th>Country of Origin </th>
+				<th>Notable Work </th>
+			</tr>
+			
+			<tr>
+				<td> <img src = "{{ url_for('static', filename='creator/image/marcbrown.jpg') }}" width = "200" height = "200" /> </td>
+				<td> <a href = "{{ url_for('static', filename='../creator/creator6.html') }}">Marc Brown</a></td>
+				<td>1946/11/25</td>
+				<td> <a href="{{ url_for('static', filename='../countryOfOrigin/usa.html') }}">United States of America</a> </td>
+				<td> <a href="{{ url_for('static', filename='../cartoon/Arthur.html') }}">Arthur</a> </td>
+			</tr>
+			
+			<tr>
+				<td> <img src = "{{ url_for('static', filename='creator/image/olegkuzovkov.jpg') }}" width = "200" height = "200" /> </td>
+				<td> <a href = "{{ url_for('static', filename='../creator/creator4.html') }}">Oleg Kuzovkov</a></td>
+				<td>1960/10/22</td>
+				<td> <a href="{{ url_for('static', filename='../countryOfOrigin/russia.html') }}">Russia</a> </td>
+				<td> <a href="{{ url_for('static', filename='../cartoons/Masha.html') }}">Masha and the Bear</a> </td>
+			</tr>
+			
+			<tr>
+				<td> <img src = "{{ url_for('static', filename='creator/image/benbocquelet.jpg') }}" width = "200" height = "200" /> </td>
+				<td> <a href = "{{ url_for('static', filename='../creator/creator5.html') }}"> Ben Bocquelet </a></td>
+				<td>1983/06/27</td>
+				<td> <a href="{{ url_for('static', filename='../countryOfOrigin/uk.html') }}">United Kingdom</a> </td>
+				<td> <a href="{{ url_for('static', filename='../cartoon/Gumball.html') }}">The Amazing World of Gumball</a> </td>
+			</tr>
+		</table>
+		
+		<!-- Sortable Table -->
+		<script type="text/javascript">sortableTable("T1", 1, 2, 3, 4);</script>
+
+		<!-- Pagination -->
+		<div class="pagination">
+			<a href="creator-main.html">&laquo;</a>
+			<a href="creator-main.html">1</a>
+			<a class="active" href="creator-main2.html">2</a>
+			<a href="#">&raquo;</a>
+		</div>
+
+	</body>
+</html>

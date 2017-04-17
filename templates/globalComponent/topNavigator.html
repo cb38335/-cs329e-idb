@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		
+		<!-- Logo -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="{{ url_for('static', filename='../index.html') }}" class="navbar-brand">CARTOONS</a>
+		</div>
+		
+		<!-- Menu Items -->
+		<div class="collapse navbar-collapse" id="mainNavBar">
+			<ul class="nav navbar-nav">
+				<li><a href="{{ url_for('static', filename='../index.html') }}">Home</a></li>
+				<li><a href="{{ url_for('static', filename='../mainPage/creator-main.html') }}">Creators</a></li>
+				<li><a href="{{ url_for('static', filename='../mainPage/cname-main.html') }}">Cartoon Name</a></li>
+				<li><a href="{{ url_for('static', filename='../mainPage/country-main.html') }}">Country of Origin</a></li>
+				<li><a href="{{ url_for('static', filename='../about/about.html') }}">About</a></li>
+			</ul>
+		</div>
+		
+	</div>
+</nav>

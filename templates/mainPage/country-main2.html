@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	
+		<title> Country of Origin </title>
+		
+		<!-- Sortable Table -->
+		<script src="{{ url_for('static', filename='utility/sortableTable/sortableTable.js') }}"></script>
+		
+		<!-- Bootstrap -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<!-- Top Navigator -->
+		<script src="https://www.w3schools.com/lib/w3data.js"></script>
+		
+		<!-- Pagination -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='utility/pagination/pagination.css') }}">
+		
+		<!-- My CSS -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mainPage/css/main.css') }}">
+		
+	</head>
+	
+	<body>
+	
+		<!-- Top Navigator -->
+		<div w3-include-html="{{ url_for('static', filename='../globalComponent/topNavigator.html') }}"></div>
+		<script>
+			w3IncludeHTML();
+		</script>
+		
+		<!-- Header2 -->
+		<h2 id = "header"> Country of Origin </h2>
+		
+		<!-- Table -->
+		<table id = "T1" width = "90%" class = sortable>
+			<tr>
+				<th> Map </th>
+				<th> Country </th>
+				<th> Population </th>
+				<th> Capital City </th>
+				<th> Capital Coordinates </th>
+			</tr>
+			
+			<tr>
+				<td> <img src = "{{ url_for('static', filename='countryOfOrigin/image/russia pics/russia_map.jpg') }}" width = "200" height = "200"/> </td>
+				<td> <a href = "{{ url_for('static', filename='../countryOfOrigin/russia.html') }}"> Russia </a></td>
+				<td> 144,554,993 </td>
+				<td> Moscow </td>
+				<td> 55° 45′ 0″ N, 37° 37′ 0″ E </td>
+			</tr>
+			
+			<tr>
+				<td> <img src = "{{ url_for('static', filename='countryOfOrigin/image/canada pics/canada_map.gif') }}" width = "200" height = "200"/> </td>
+				<td> <a href = "{{ url_for('static', filename='../countryOfOrigin/canada.html') }}"> Canada </a></td>
+				<td> 35,151,728 </td>
+				<td> Ottawa </td>
+				<td> 45° 24′ 0″ N, 75° 40′ 0″ W </td>
+			</tr>
+			
+			<tr>
+				<td> <img src = "{{ url_for('static', filename='countryOfOrigin/image/uk pics/uk_map.gif') }}" width = "200" height = "200" /> </td>
+				<td> <a href = "{{ url_for('static', filename='../countryOfOrigin/uk.html') }}"> United Kingdom </a></td>
+				<td> 54,786,300 </td>
+				<td> London </td>
+				<td> 51° 30′ 0″ N, 0° 7′ 0″ W </td>
+			</tr>
+		</table>
+		
+		<!-- Sortable Table -->
+		<script type="text/javascript">sortableTable("T1", 1, 2,3,4);</script>
+		
+		<!-- Pagination -->
+		<div class="pagination">
+			<a href="country-main.html">&laquo;</a>
+			<a href="country-main.html">1</a>
+			<a class="active" href="country-main2.html">2</a>
+			<a href="#">&raquo;</a>
+		</div>
+
+	</body>
+</html>
