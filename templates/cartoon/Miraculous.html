@@ -3,15 +3,13 @@
     <title>Miraculous: Tales of Ladybug & Cat Noir</title>
 
     <!-- Bootstrap -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
-      <script src="https://www.w3schools.com/lib/w3data.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Top Navigator -->
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
 
     <style type="text/css">
     body {
@@ -32,17 +30,17 @@
 
   <body>
     <!-- Top Navigator -->
-		<div w3-include-html="http://cs329e-cartoons.me/splash/topNavigator.html"></div>
+		<div w3-include-html="{{ url_for('static', filename='../globalComponent/topNavigator.html') }}"></div>
 		<script>
 			w3IncludeHTML();
 		</script>
     <h1>Miraculous: Tales of Ladybug & Cat Noir</h1>
     <center>
       <font size="5">Slideshow:</font>
-      <img class="mySlides" src="miraculous.jpg">
-    <img class="mySlides" src="miraculous2.jpg">
-    <img class="mySlides" src="miraculous3.jpg">
-    <img class="mySlides" src="miraculouslogo.png">
+    <img class="mySlides" src = "{{ url_for('static', filename='cartoon/image/miraculous.jpg') }}">
+    <img class="mySlides" src = "{{ url_for('static', filename='cartoon/image/miraculous2.jpg') }}">
+    <img class="mySlides" src = "{{ url_for('static', filename='cartoon/image/miraculous3.jpg') }}">
+    <img class="mySlides" src = "{{ url_for('static', filename='cartoon/image/miraculouslogo.pn') }}">
   </br>
 
     <button class="btn" onclick="plusDivs(-1)">Previous Image</button>
@@ -83,7 +81,7 @@
       </tr>
       <tr>
         <th>Country of Origin</th>
-        <th><a href="http://cs329e-cartoons.me/CountryOfOrigin/france.html">France</a></th>
+        <th><a href="{{ url_for('static', filename='../countryOfOrigin/france.html') }}">France</a></th>
       </tr>
       <tr>
         <th>Main Characters</th>
@@ -92,7 +90,7 @@
       </tr>
       <tr>
         <th>Created by</th>
-        <th><a href="http://cs329e-cartoons.me/Creators/creator2.html">Thomas Astruc</a></th>
+        <th><a href = "{{ url_for('static', filename='../creator/creator2.html') }}">Thomas Astruc</a></th>
       </tr>
       <tr>
         <th>Directed by</th>
