@@ -3,46 +3,35 @@
   <head>
     <title>Thomas Astruc</title>
 
-    <!-- Bootstrap -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<!-- Top Navigator -->
+		<script src="https://www.w3schools.com/lib/w3data.js"></script>
+		
+		<!-- My CSS -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='creator/css/creator.css') }}">
+		
+	</head>
 
-    <!-- Include this line for top navigator -->
-    <script src="https://www.w3schools.com/lib/w3data.js"></script>
-
-    <style>
-      table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-      }
-      td, th {
-        text-align: center;
-        border: 1px solid #dddddd;
-        padding: 30px;
-      }
-    </style>
-
-  </head>
-
-  <body style="background-color: #EAF2F8">
-    <!-- Top Navigator -->
-    <div w3-include-html="http://cs329e-cartoons.me/splash/topNavigator.html"></div>
-    <script>
-      w3IncludeHTML();
-    </script>
+	<body style="background-color: #EAF2F8">
+    
+		<!-- Top Navigator -->
+		<div w3-include-html="{{ url_for('static', filename='../globalComponent/topNavigator.html') }}"></div>
+		<script>
+			w3IncludeHTML();
+		</script>
 
     <table style="background-color: white; margin-top: 30px; margin-left: 20px;" width=30% align="left">
       <tr>
         <th>Thomas Astruc</th>
       </tr>
-      <td><img src = "images/thomasastruc.png" alt = "alt" height=200 width=200 align="center"/></td>
+      <td><img src = "{{ url_for('static', filename='creator/image/thomasastruc.png') }}" alt = "alt" height=200 width=200 align="center"/></td>
       <tr>
-        <td>Birthdate: January 18, 1975<br><a href="http://cs329e-cartoons.me/CountryOfOrigin/france.html">France</a></td>
+        <td>Birthdate: January 18, 1975<br><a href="{{ url_for('static', filename='../countryOfOrigin/france.html') }}">France</a></td>
       </tr>
     </table>
 
@@ -51,8 +40,8 @@
         <th colspan="2">Series</th>
       </tr>
       <tr>
-        <td width=20%><img src="images/miraculouslogo.jpg" alt="alt" height=100 width=100 align="center" /></td>
-        <td><a href="http://cs329e-cartoons.me/Cartoons/Miraculous.html">Miraculous: Tales of Ladybug & Cat Noir</a></td>
+        <td width=20%><img src="{{ url_for('static', filename='creator/image/miraculouslogo.jpg') }} " alt="alt" height=100 width=100 align="center" /></td>
+        <td><a href="{{ url_for('static', filename='../cartoon/Miraculous.html') }}">Miraculous: Tales of Ladybug & Cat Noir</a></td>
       </tr>
     </table>
 
