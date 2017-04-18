@@ -1,13 +1,10 @@
 <!doctype html>
 <html>
 	<head>
-	<!-- Bootstrap -->
+		<!-- Bootstrap -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 		<title>
@@ -49,10 +46,12 @@
 	</head>
 
 	<body>
-		<div w3-include-html="http://cs329e-cartoons.me/splash/topNavigator.html"></div>
+		<!-- Top Navigator -->
+		<div w3-include-html="{{ url_for('static', filename='../globalComponent/topNavigator.html') }}"></div>
 		<script>
 			w3IncludeHTML();
 		</script>
+
 	<div class = "text-center jumbotron">
 		<h1><strong>Russia</strong></h1>
 	</div>
@@ -71,27 +70,27 @@
   <!-- Wrapper for slides -->
 	<div class="carousel-inner" role="listbox">
 		<div class="item active">
-		<img src="pics/russia pics/russia_map.jpg" alt="Russia Map" width = "600" height = "400">
+		<img src="{{ url_for('static', filename='countryOfOrigin/image/russia pics/russia_map.jpg') }}" alt="Russia Map" width="600" height="400">
     </div>
 
     <div class="item">
-      <img src="pics/russia pics/russia_flag.png" alt="Russia Flag" width = "600" height = "400">
+      <img src="{{ url_for('static', filename='countryOfOrigin/image/russia pics/russia_flag.png') }}" alt="Russia Flag" width="600" height="400">
     </div>
 	
    <div class="item">
-      <img src="pics/russia pics/cathedral.jpg" alt="Cathedral" width = "600" height = "400">
+      <img src="{{ url_for('static', filename='countryOfOrigin/image/russia pics/cathedral.jpg') }}" alt="Cathedral" width="600" height="400">
     </div>
 	
     <div class="item">
-      <img src="pics/russia pics/geysers.jpg" alt="Geyser" width = "600" height = "400">
+      <img src="{{ url_for('static', filename='countryOfOrigin/image/russia pics/geysers.jpg') }}" alt="Geyser" width="600" height="400">
     </div>
 	
     <div class="item">
-      <img src="pics/russia pics/kizhi.jpg" alt="Kizhi" width = "600" height = "400">
+      <img src="{{ url_for('static', filename='countryOfOrigin/image/russia pics/kizhi.jpg') }}" alt="Kizhi" width="600" height="400">
     </div>
 	
     <div class="item">
-      <img src="pics/russia pics/suzdal.jpg" alt="Suzdal" width = "600" height = "400">
+      <img src="{{ url_for('static', filename='countryOfOrigin/image/russia pics/suzdal.jpg') }}" alt="Suzdal" width="600" height="400">
     </div>
 
 	</div>
@@ -110,14 +109,14 @@
 	<div class = "jumbotron text-center">
 		<h3>Current Population: 144,554,993</h3>
 		<h3>Capital: Moscow</h3>
-		<h3>Coordinates of Capital: 55�45'N 37�37'E</h3>
+		<h3>Coordinates of Capital: 55°45′N 37°37′E</h3>
 	</div>
 	<br>
 	<div class = "container text-center">
 	<div class="row">
 		<div class="col-sm-4">
 			<p><strong>Masha and the Bear</strong></p><br>
-			<a href = "../Cartoons/Masha.html"><img src="../Cartoons/Masha3.jpg" class = "cartoon" alt="Random Name" width = "255" height = "255"></a>
+			<a href="{{ url_for('static', filename='../cartoon/Masha.html') }}"><img src="{{ url_for('static', filename='cartoon/image/Masha.png') }}" alt="Random Name" width = "255" height = "255"></a>
 		</div>
 	</div>
 	</div>

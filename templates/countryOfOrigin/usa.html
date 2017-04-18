@@ -3,11 +3,8 @@
 	<head>
 	<!-- Bootstrap -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 		<title>
@@ -49,10 +46,12 @@
 	</head>
 
 	<body>
-		<div w3-include-html="http://cs329e-cartoons.me/splash/topNavigator.html"></div>
+		<!-- Top Navigator -->
+		<div w3-include-html="{{ url_for('static', filename='../globalComponent/topNavigator.html') }}"></div>
 		<script>
 			w3IncludeHTML();
 		</script>
+
 	<div class = "text-center jumbotron">
 		<h1><strong>United States of America</strong></h1>
 	</div>
@@ -71,27 +70,27 @@
   <!-- Wrapper for slides -->
 	<div class="carousel-inner" role="listbox">
 		<div class="item active">
-		<img src="pics/usa pics/usa_map.jpg" alt="USA Map" width = "600" height = "400">
+		<img src="{{ url_for('static', filename='countryOfOrigin/image/usa pics/usa_map.jpg') }}" alt="USA Map" width="600" height="400">
     </div>
 
     <div class="item">
-      <img src="pics/usa pics/usa_flag.png" alt="USA Flag" width = "600" height = "400">
+      <img src="{{ url_for('static', filename='countryOfOrigin/image/usa pics/usa_flag.png') }}" alt="USA Flag" width="600" height="400">
     </div>
 	
    <div class="item">
-      <img src="pics/usa pics/arch.jpg" alt="St.Lois Arch" width = "600" height = "400">
+      <img src="{{ url_for('static', filename='countryOfOrigin/image/usa pics/arch.jpg') }}" alt="St. Louis Arch" width="600" height="400">
     </div>
 	
     <div class="item">
-      <img src="pics/usa pics/bridge.jpg" alt="Golden Gate Bridge" width = "600" height = "400">
+      <img src="{{ url_for('static', filename='countryOfOrigin/image/usa pics/bridge.jpg') }}" alt="Golden Gate Bridge" width="600" height="400">
     </div>
 	
     <div class="item">
-      <img src="pics/usa pics/canyon.jpg" alt="Grand Canyon" width = "600" height = "400">
+      <img src="{{ url_for('static', filename='countryOfOrigin/image/usa pics/canyon.jpg') }}" alt="Grand Canyon" width="600" height="400">
     </div>
 	
     <div class="item">
-      <img src="pics/usa pics/house.jpg" alt="White House" width = "600" height = "400">
+      <img src="{{ url_for('static', filename='countryOfOrigin/image/usa pics/house.jpg') }}" alt="That place where the President is SUPPOSED to work..." width="600" height="400">
     </div>
 
 	</div>
@@ -117,15 +116,15 @@
 	<div class="row">
 		<div class="col-sm-4">
 			<p><strong>The Simpsons</strong></p><br>
-			<a href = "../Cartoons/TheSimpsons.html"><img src="../Cartoons/TheSimpsons.png" class = "cartoon" alt="Random Name" width = "255" height = "255"></a>
+			<a href="{{ url_for('static', filename='../cartoon/TheSimpsons.html') }}"><img src="{{ url_for('static', filename='cartoon/image/TheSimpsons.png') }}" class = "cartoon" alt="Random Name" width = "255" height = "255"></a>
 		</div>
 		<div class="col-sm-4">
 			<p><strong>Gumball</strong></p><br>
-			<a href = "../Cartoons/Gumball.html"><img src="../Cartoons/Gumball.png" class = "cartoon" alt="Random Name" width = "255" height = "255"></a>
+			<a href="{{ url_for('static', filename='../cartoon/Gumball.html') }}"><img src="{{ url_for('static', filename='cartoon/image/Gumball.png') }}" class = "cartoon" alt="Random Name" width = "255" height = "255"></a>
 		</div>
 		<div class="col-sm-4">
 			<p><strong>Arthur</strong></p><br>
-			<a href = "../Cartoons/Arthur.html"><img src="../Cartoons/Arthur.png" class = "cartoon" alt="Random Name" width = "255" height = "255">
+			<a href="{{ url_for('static', filename='../cartoon/Arthur.html') }}"><img src="{{ url_for('static', filename='cartoon/image/Arthur.png') }}" class = "cartoon" alt="Random Name" width = "255" height = "255">
 		</div>
 	</div>
 	</div>
