@@ -1,10 +1,36 @@
 from flask import Flask, render_template
+import requests
 
 app = Flask(__name__)
 
 @app.route("/")
 def entry():
     return render_template("index.html")
+
+@app.route("/about/about.html")
+def about():
+    # Getting information of contributors from GitHub
+    r = requests.get("https://api.github.com/repos/cb38335/cb38335.github.io/contributors")
+    
+    # Store data as json file
+    json = r.json()
+
+    # Create dictionary for contributors' information
+    contributors = {}
+
+    # Variable for the total number of commits
+    total = 0
+
+    # Reading json file
+    for x in json:
+        # Gets each person's number of commits and store in the dictionary
+        contributionNum = x["contributions"]
+        contributors[x["login"]] = contributionNum
+
+        # Calculates the total number of commits
+        total = total + contributionNum
+
+    return render_template("about/about.html", daniel=contributors["danielvuong7"], christian=contributors["caa2783"], grecia=contributors["greciareyna"], chaquette=contributors["cb38335"], rin=contributors["pomeryt"], total=total)
 
 @app.route("/index.html")
 def index():
@@ -37,10 +63,6 @@ def countryMain():
 @app.route("/mainPage/country-main2.html")
 def countryMain2():
     return render_template("mainPage/country-main2.html")
-
-@app.route("/about/about.html")
-def about():
-    return render_template("about/about.html")
 
 @app.route("/creator/creator1.html")
 def creator1():
@@ -119,5 +141,5 @@ if __name__ == "__main__":
     app.run("107.170.8.240", "80")
 
     # For Test
-    #app.run()
+    # app.run()
     
