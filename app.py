@@ -138,7 +138,7 @@ def country6():
 
 if __name__ == "__main__":
     # Actual Web Address
-    app.run("107.170.8.240", "80")
+    app.run("107.170.56.162", "80")
 
     # For Test
     # app.run()
